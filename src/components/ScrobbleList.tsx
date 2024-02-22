@@ -32,7 +32,7 @@ const ScrobbleList: React.FC<ScrobbleListProps> = ({ scrobbles }) => {
         <div className="scrobble-list__header scrobble-list__artists">Artist</div>
         <div className="scrobble-list__header scrobble-list__played">Played</div>
         {scrobbles.map((scrobble) => (
-          <ScrobbleListRow key={scrobble.scrobble_id || scrobble.track_id} scrobble={scrobble} />
+          <ScrobbleListRow key={scrobble.scrobble_id} scrobble={scrobble} />
         ))}
       </div>
     </>

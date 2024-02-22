@@ -66,7 +66,8 @@ function App() {
   };
 
   const addScrobble = (scrobble: Scrobble): void => {
-    setScrobbles((prev) => [scrobble, ...prev]);
+    const random = Math.floor(Math.random() * 900000) + 100000;
+    setScrobbles((prev) => [{ ...scrobble, scrobble_id: scrobble.track_id + random }, ...prev]);
   };
   return (
     <>
