@@ -1,0 +1,49 @@
+.scrobble-list {
+    display: grid;
+    grid-template-columns: 50px 4fr 4fr 1fr;
+    gap: 1rem;
+    font-size: 0.85rem;
+    align-items: center;
+}
+
+.scrobble-list > div {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    position: relative;
+}
+
+.scrobble-list > .scrobble-list__header {
+    color: var(--text-secondary);
+    position: sticky;
+    top: 326px;
+    background: linear-gradient(0deg, transparent, var(--background-default) 45%);
+    padding-bottom: 1rem;
+    min-height: 1rem; 
+    z-index: 10;
+}
+.scrobble-list__image {
+    width: 50px;
+    height: 50px;
+    border-radius: 2px;
+}
+
+@media screen and (max-width: 700px) {
+    .scrobble-list {
+        grid-template-columns: 50px 4fr 1fr;
+    }
+    .scrobble-list__artists {
+        display: none;
+    }
+}
+@media screen and (max-width: 460px) {
+    .scrobble-list {
+        grid-template-columns: 50px 1fr;
+    }
+    .scrobble-list__played {
+        display: none;
+    }
+    .scrobble-list > .scrobble-list__header {
+       display: none;
+    }
+}

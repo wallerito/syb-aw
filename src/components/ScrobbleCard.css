@@ -1,0 +1,73 @@
+.scrobble-card {
+    display: flex;
+    gap: 3rem;
+    position: relative;
+}
+
+.scrobble-card__image {
+    border-radius: var(--border-radius);
+    max-width: 200px;
+    max-height: 200px;
+}
+.scrobble-card__details {
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    overflow: hidden;
+}
+.scrobble-card__info {
+    display: flex;
+    flex-direction: column;
+}
+.scrobble-card__info--primary {
+    gap: 0.5rem;
+}
+.scrobble-card__info--secondary {
+    gap: 0.5rem;
+    color: var(--text-secondary);
+}
+
+.scrobble-card__info--secondary > div {
+    font-size: .85rem;
+}
+
+.scrobble-card__info__title {
+    font-size: 3rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+
+}
+
+.scrobble-card__info__artists {
+    font-size: 1.25rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+
+}
+
+@media screen and (max-width: 700px) {
+    .scrobble-card__info__title {
+        font-size: 1.25rem;
+    
+    }
+    .scrobble-card__info__artists {
+        font-size: 1rem;
+    
+    }
+}
+@media screen and (max-width: 460px) {
+    .scrobble-card {
+        flex-direction: column;
+    }
+    .scrobble-card__image {
+        margin: auto;
+    }
+    .scrobble-card__info__title, .scrobble-card__info__artists {
+        white-space: wrap;
+    }
+}

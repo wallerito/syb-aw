@@ -1,0 +1,20 @@
+.cta-button {
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    opacity: 0.7;
+    z-index: 100;
+}
+.cta-button:hover {
+    opacity: 1;
+}
+
+@media screen and (max-width: 460px) {
+    .cta-button {
+        top: unset;
+        bottom: 2rem;
+    }
+}

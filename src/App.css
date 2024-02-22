@@ -1,0 +1,42 @@
+.wrapper {
+  margin: auto;
+  max-width: 1280px;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+.section {
+  position: relative;
+}
+.section--top {
+  padding-top: 2rem;
+  z-index: 15;
+  background-color: var(--background-default);
+  position: sticky;
+  top: 0;
+}
+.section--bottom {
+  padding-bottom: 2rem;
+}
+.section__header {
+  color: var(--text-secondary);
+  position: relative;
+  margin-bottom: 2rem;
+  z-index: 11;
+}
+.section__header > hr {
+    opacity: 0.1;
+}
+.section__content {
+  margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 460px) {
+  .wrapper {
+    gap: 1rem;
+  }
+  .section--top {
+    position: static;
+  }
+}
